@@ -127,6 +127,7 @@ function initActors() {
 
 $(document).keyup(function (event) {
     var acted = false;
+    if(player.hp <= 0) return false;
     switch (event.keyCode) {
         case 37:
             // left arrow
