@@ -2,7 +2,7 @@
     font-family:"Courier New", Courier, monospace;
     background-color: black;
     color: grey;
-    float:left;
+    text-align:center;
     border: 3px solid;
     border-color:grey;
 }
