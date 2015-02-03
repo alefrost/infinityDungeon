@@ -16,7 +16,7 @@ var leaves = [root];
 var halls = [];
 
 //runBasic();
-runComplex();
+//runComplex();
 
 // Run game with random map
 function runBasic() {
