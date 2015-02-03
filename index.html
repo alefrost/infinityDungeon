@@ -9,8 +9,27 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     
     <link rel="stylesheet" type="text/css" href="css/game.css">
-    <script type="text/javascript" src="js/game.js"></script>
-    
+    <script src="js/game.js"></script>
+    <script type="text/javascript">
+      var ROWS = 25;
+      var COLS = 50;
+      var ACTORS = 10;
+      var MIN_LEAF_SIZE = 6;
+      var MAX_LEAF_SIZE = 20;
+      var map;
+      
+      var player;
+      var actorList = [];
+      var livingEnemies;
+      var actorMap = {};
+      
+      var root = createLeaf(0, 0, COLS, ROWS);
+      var leaves = [root];
+      var halls = [];
+      
+      //runBasic();
+      runComplex();
+    </script>
     <title>infinityDungeon by alefrost</title>
   </head>
 
