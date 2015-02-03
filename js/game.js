@@ -15,6 +15,16 @@ var root = createLeaf(0, 0, COLS, ROWS);
 var leaves = [root];
 var halls = [];
 
+function clearGame() {
+    var map;
+    var player;
+    var actorList = [];
+    var livingEnemies;
+    var actorMap = {};
+    var root = createLeaf(0, 0, COLS, ROWS);
+    var leaves = [root];
+    var halls = [];
+}
 //runBasic();
 //runComplex();
 
