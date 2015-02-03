@@ -1,5 +1,5 @@
-var ROWS = 25;
-var COLS = 50;
+var ROWS = 20;
+var COLS = 60;
 var ACTORS = 10;
 var MIN_LEAF_SIZE = 6;
 var MAX_LEAF_SIZE = 20;
