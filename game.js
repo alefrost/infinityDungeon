@@ -127,58 +127,60 @@ function initActors() {
 
 $(document).keyup(function (event) {
     var acted = false;
-    if(player.hp <= 0) return false;
-    switch (event.keyCode) {
-        case 37:
-            // left arrow
-            acted = moveTo(player, {
-                x: -1,
-                y: 0
-            });
-            break;
+    if(player.hp > 0) {
+        switch (event.keyCode) {
+            case 37:
+                // left arrow
+                acted = moveTo(player, {
+                    x: -1,
+                    y: 0
+                });
+                break;
+    
+            case 38:
+                // up arrow
+                acted = moveTo(player, {
+                    x: 0,
+                    y: -1
+                });
+                break;
+    
+            case 39:
+                // right arrow
+                acted = moveTo(player, {
+                    x: 1,
+                    y: 0
+                });
+                break;
+    
+            case 40:
+                // down arrow
+                acted = moveTo(player, {
+                    x: 0,
+                    y: 1
+                });
+                break;
+    
+            case 27:
+                // escape
+                clearDebug();
+                break;
+            default:
+                debug("not a valid action...<br />");
+        }
+        
+        display();
+    
+        if (acted) for (var enemy in actorList) {
+            // skip the player
+            if (enemy == 0) continue;
+    
+            var e = actorList[enemy];
+            if (e != null) aiAct(e);
+        }
 
-        case 38:
-            // up arrow
-            acted = moveTo(player, {
-                x: 0,
-                y: -1
-            });
-            break;
-
-        case 39:
-            // right arrow
-            acted = moveTo(player, {
-                x: 1,
-                y: 0
-            });
-            break;
-
-        case 40:
-            // down arrow
-            acted = moveTo(player, {
-                x: 0,
-                y: 1
-            });
-            break;
-
-        case 27:
-            // escape
-            clearDebug();
-            break;
-        default:
-            debug("not a valid action...<br />");
+        display();
     }
-    display();
-
-    if (acted) for (var enemy in actorList) {
-        // skip the player
-        if (enemy == 0) continue;
-
-        var e = actorList[enemy];
-        if (e != null) aiAct(e);
-    }
-
-    display();
 });
 
 function canGo(actor, dir) {
