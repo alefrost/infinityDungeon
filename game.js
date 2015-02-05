@@ -182,8 +182,8 @@ $(document).keyup(function (event) {
         display();
         
         // Prevent arrow keys from scrolling page
-        var arrowkeys = [37,38,39,40];
-        if ($.inArray(event.keyCode, arrowkeys)){
+        var key = event.keyCode;
+        if (key == 37 || key == 38 || key == 39 || key == 40){
             event.preventDefault();
             return false;
         }
