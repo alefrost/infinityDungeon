@@ -125,8 +125,13 @@ function initActors() {
     livingEnemies = ACTORS - 1;
 }
 
-$(document).keyup(function (event) {
+$(document).keydown(function (event) {
     var acted = false;
+
+    if (event.keyCode > 36 && event.keyCode < 41) {
+        event.preventDefault();
+    }
+
     if(player.hp > 0) {
         switch (event.keyCode) {
             case 37:
