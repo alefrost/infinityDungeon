@@ -471,9 +471,9 @@ function createHalls(r1, r2) {
         }
     } else { // w == 0
         if (h < 0) {
-            halls.push({x:point2.x,y:point2.y,w:Math.abs(w),h:1});
+            halls.push({x:point2.x,y:point2.y,w:1,h:Math.abs(h)});
         } else if (h > 0) {
-            halls.push({x:point1.x,y:point1.y,w:Math.abs(w),h:1});
+            halls.push({x:point1.x,y:point1.y,w:1,h:Math.abs(h)});
         }
     }
 }
