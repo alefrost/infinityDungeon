@@ -423,8 +423,8 @@ function getRoom(leaf) {
 }
 
 function createHalls(r1, r2) {
-    var point1 = {x: randomNumber(r1.position.x,r1.position.x+r1.size.x), y: randomNumber(r1.position.y,r1.position.y+r1.size.y)};
-    var point2 = {x: randomNumber(r2.position.x,r2.position.x+r2.size.x), y: randomNumber(r2.position.y,r2.position.y+r2.size.y)};
+    var point1 = {x: randomNumber(r1.position.x,r1.position.x+r1.size.x - 2), y: randomNumber(r1.position.y,r1.position.y+r1.size.y - 2)};
+    var point2 = {x: randomNumber(r2.position.x,r2.position.x+r2.size.x - 2), y: randomNumber(r2.position.y,r2.position.y+r2.size.y - 2)};
     
     var w = point2.x-point1.x;
     var h = point2.y-point1.y;
