@@ -444,7 +444,7 @@ function createHalls(r1, r2) {
                 halls.push({x:point2.x,y:point1.y,w:1,h:Math.abs(h)});
             } else {
                 halls.push({x:point2.x,y:point2.y,w:Math.abs(w),h:1});
-                halls.push({x:point1.x,y:point1.y,w:1,h:Math.abs(h)});
+                halls.push({x:point1.x,y:point1.y,w:1,h:Math.abs(h)+1});
             }
         } else {// h == 0 
             halls.push({x:point2.x,y:point2.y,w:Math.abs(w),h:1});
@@ -452,7 +452,7 @@ function createHalls(r1, r2) {
     } else if (w > 0) {
         if (h < 0) {
             if (Math.random() > .5) {
-                halls.push({x:point1.x,y:point2.y,w:Math.abs(w),h:1});
+                halls.push({x:point1.x,y:point2.y,w:Math.abs(w)+1,h:1});
                 halls.push({x:point1.x,y:point2.y,w:1,h:Math.abs(h)});
             } else {
                 halls.push({x:point1.x,y:point1.y,w:Math.abs(w),h:1});
